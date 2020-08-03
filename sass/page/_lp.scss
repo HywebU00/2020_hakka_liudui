@@ -1,0 +1,132 @@
+.lp {
+    table {
+        td {
+            a {
+                @include aSetting_nocolor;
+            }
+            &.date {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+            &.num {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .list {
+        &>ul, ol {
+            list-style-type: none;
+            padding: 0;
+            border-top: 2px solid $primaryColor;
+            &>li {
+                padding: 1em 0;
+                border-bottom: 1px solid #c5c5c5;
+                position: relative; // outline: 1px solid blue;
+                .tag {
+                    margin-left: 2em;
+                }
+                &>a {
+                    display: block;
+                    position: relative;
+                    line-height: 1.45em;
+                    vertical-align: middle;
+                    color: $color-word;
+                    @include text-overflow;
+                    margin-left: 7em;
+
+
+                    &:hover {
+                        color: $aHover;
+                    }
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &:after {
+                            content: ".";
+                            display: inline-block;
+                        }
+                    }
+                }
+                span.dept {
+                    display: inline-block;
+                    font-size: .938em;
+                    @include screen("mobile") {
+                        display: block;
+                    }
+                }
+                time {
+                    color: $color-word;
+                    font-size: .938em;
+                    margin: 1em .5em;
+                    font-family: 'Merriweather', serif;
+                    position: absolute;
+                    left:0;
+                    top:0;
+                }
+            }
+        }
+    }
+}
+.album {
+    margin: 1em auto;
+    ul {
+        @include li-reset;
+        li {
+            @include make_col(3, 1);
+            overflow: visible;
+            .thumbnail {
+                width: 100%;
+                max-width: 90%;
+                margin: 0 auto 1em;
+            }
+        }
+    }
+}
+.album2 {
+    margin: 1em auto;
+    clear: both;
+    ul {
+        @include li-reset;
+        li {
+            @include make_col(3, 1);
+            overflow: visible;
+            .thumbnail {
+                width: 100%;
+                max-width: 90%;
+                margin: 0 auto 1em;
+            }
+        }
+    }
+    .caption{
+    }
+    .date{
+        position: absolute;
+        top:0;
+        right:0;
+        background: $secondaryColor;
+        color:#fff;
+        font-weight: bold;
+        width: 3em;
+        height: 2em;
+        text-align: center;
+        line-height: 2em;
+        font-size: 1.35em;
+        font-family: 'Alice', serif;
+    }
+    .img-container {
+        @include aspect-ratio(16, 9);
+    }
+    .thumbnail h2, .thumbnail h3, .thumbnail h4{
+        height: 1.5em;
+    }
+}

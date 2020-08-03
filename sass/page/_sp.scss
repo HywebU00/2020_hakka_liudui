@@ -1,0 +1,642 @@
+.topimg{
+	text-align: center;
+	margin-top: 1em;
+	img{
+		width:100%;
+	}
+	p{
+		text-align: left;
+	}
+
+}
+
+.inner-search{
+	margin-bottom: 1.5em;
+	clear: both;
+	.collapsible {
+		background: $primaryColor url('../images/icon-search.png')no-repeat .5em center;
+		background-size: 28px auto;
+		color: #fff;
+		cursor: pointer;
+		padding:.5em 1em .5em 40px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		// outline: none;
+		margin: 0;
+		line-height: 1.4em;
+		border-radius: 3px;
+		position: relative;
+		font-weight: bold;
+		display: block;
+		&:after {
+			content: '';
+			color: #fff;
+			font-weight: bold;
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: 7px;
+			right: 8px;
+			background: url(../images/icon-add.png) no-repeat center center;
+			background-size: 8px auto;
+
+		}
+		&:hover, &:focus{
+			background: darken($aHover, 5) url('../images/icon-search.png')no-repeat .5em center;
+			background-size: 28px auto;
+			// box-shadow: 0 0 5px 1px $form-focus;
+		}
+	}
+
+	.active{
+		&:after {
+			background: url(../images/icon-cut.png) no-repeat center center;
+			background-size: 8px auto;
+
+		}
+	}
+	.content {
+		padding: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+		background-color: #fff;
+		box-shadow: 0 0 5px 1px #ccc;
+	}
+	.form_grid{
+		margin: 1em 2em;
+		@include screen('mobile') {
+			margin: 1em;
+		}
+	}
+
+}
+
+
+//
+//onlist
+.onlist {
+	margin: 1em auto;
+
+	h3{
+		margin: 1em 0 .5em 15px;
+		color:$primaryColor;
+		&:hover, &:focus{
+			color:$secondaryColor;
+		}
+	}
+	p{
+		margin: 0 0 1em 15px;  
+	}
+	time{
+		font-size: .938em;
+		margin: 0 0 0 15px;  
+	}
+	ul {
+		@include li-reset;
+		li {
+			position: relative;
+			border: solid 1px #ccc;
+			overflow: hidden;
+			padding: 0;
+			box-shadow: 0 1px 5px 1px #ccc;
+
+			// border-radius: 8px;
+			margin-bottom: 1.5em;
+			a{
+				display: block;
+				padding: 0;
+				margin: 0;
+				background: #fff;
+				overflow: hidden;
+
+				&:hover{
+					background: #fefef0;
+				}
+				&:focus{
+					background: #fefef0;
+				}
+			}
+
+		}
+	}
+	.pic{
+		@include make-xs-column(12);
+		@include make-sm-column(4);
+		@include make-md-column(4);
+		@include make-lg-column(3);     
+		// @include gutter();
+		padding: 0;
+		margin: 0;
+		
+		@include screen('mobile') {
+			margin: .5em 0;
+		}
+
+		img{
+			width:100%;
+			height: 100%;
+			margin: 6px 6px 0 6px;
+		}
+	}
+	.infodata{
+		@include make-xs-column(12);
+		@include make-sm-column(8);
+		@include make-md-column(8);
+		@include make-lg-column(9); 
+		@include gutter();    
+	}
+
+
+}
+
+
+.inttxt{
+	h3{
+		margin: .5em 0;
+		font-size: 1.125em;
+		font-weight: bold;
+	}
+	p{
+		font-size: .938em;
+		line-height: 1.6em;
+	}
+}
+
+.icon-360{
+	float: right;
+	margin-top: -4em;
+	a{
+		display: block;
+		position: relative;
+		padding: .6em .8em .5em 60px;
+		line-height: 1em;
+		background: #eee;
+		border-radius: 5px;
+		color: #111;
+		font-weight: bold;
+		border: solid 1px #ddd;
+		box-shadow: 2px 2px 5px 1px #ddd;
+		&:before{
+			content:'';
+			position: absolute;
+			left:5px;
+			top:.2em;
+			width:50px;
+			height: 30px;
+			background: url('../images/360.png')no-repeat center center;
+			background-size: 50px auto;
+		}
+		&:hover, &:focus{
+			background: $color-yellow;
+			color: #000000;
+		}
+	}
+}
+
+.unit{
+	h3{
+		font-size: 1.5em;
+		color:$primaryColor;
+		border-bottom: solid 1px #ccc;
+		margin-bottom: .5em;
+		padding-bottom: .3em;
+	}
+	h4{
+		margin: 0;
+	}
+
+}
+.unit2{
+	font-size: 1.125em;
+	font-weight: normal;
+	line-height: 1.6em;
+	height: 29.5em;
+	overflow-y: auto;
+	@media screen and (max-width: 768px) {
+		margin: 0 0 0 -13em;
+	}
+	@include screen('mobile') {
+		margin: 0;
+		height: auto;
+	}
+	h3{
+		font-size: 1.5em;
+		color:$primaryColor;
+		border-bottom: solid 1px #ccc;
+		margin-bottom: .5em;
+		padding-bottom: .3em;
+	}
+	h4{
+		margin: 0;
+		font-size: 1.25em;
+		color:$secondaryColor;
+	}
+	p{
+		margin: .5em 0 .5em;
+	}
+
+}
+
+//unitmap
+.unitmap{
+	position: relative;
+	margin: 1em 0;
+	padding: 2em 0;
+	min-height: 1000px;
+	width: 100%;
+	// background: url('../images/mpimg2.png')no-repeat left top;
+	// background-size: 100% auto;
+	// max-height: 500px;
+	// background: #fff;
+	// border-radius: 8px;
+	// box-shadow: 0 0 5px 1px #ccc;
+	@include screen('tablet') {
+	}
+	@include screen('mobile') {
+		// background: url('../images/mpimg2.png')no-repeat left 8em;
+		// background-size: 200% auto;
+		// padding: 0;
+	}
+	h2{
+		font-family: 'Noto Serif TC', serif;
+		font-weight: 700;
+		font-size: 2em;
+		line-height: 1.4em;
+		letter-spacing:2px;
+		color:#393333;
+		margin: .5em 0;
+	}
+	ul{
+		margin: 0 0 0 .2em;
+		padding: 0;
+		@include screen('mobile') {
+			margin: 0;
+		}
+
+	}
+	ul > li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+
+		.area {
+			text-decoration: none;
+			padding: .5em 1em;
+			width: 10em;
+			background: #180d3c;
+			color: #fff;
+			display: inline-block;
+			margin-bottom: .3em;
+			@include screen('mobile') {
+				width: 100%;
+			}
+
+			&:hover{
+				background: #7ccf65; 
+			}
+			&:focus{
+				box-shadow: 0 0 5px 1px #fb388c;
+			}
+			&.active {
+				background: #7ccf65;
+			}
+		}
+	}
+	.maptab {
+		display: none;
+		position: absolute;
+		top:0;
+		left:15em;
+
+		img{
+			margin: 0;
+			width: 300px;
+			height: auto;
+		}
+		@include screen('mobile') {
+			position: relative;
+			left:0;
+			img{
+				margin-top: 1em;	
+			}
+		}
+		// div{
+		// 	a{
+		// 		background: rgba(255,255,255, .8);
+		// 		border-radius: 3px;
+		// 		padding: .5em .5em;
+		// 		display: block;
+		// 		line-height: 1em;
+		// 		font-weight: bold;
+		// 		min-width: 4em;
+		// 		box-shadow: 0 0 3px 1px #ccc;
+		// 		&:focus{
+		// 			box-shadow: 0 0 3px 1px #fb388c;
+		// 		}
+		// 	}  
+		// }
+		dl{
+			margin: 0;
+			padding: 0;
+			dt{
+				margin: 0;
+				padding: 0;
+				color:#f6fc4e;
+				font-weight: bold;
+				text-shadow: 1px 1px 5px #000;
+			}
+			dd{
+				margin: 0;
+				padding: 0;
+				a{
+					display: block;
+					padding: .5em 0 .5em 36px;
+					line-height: 1.2em;
+					font-size: .938em;
+					color:#fff;
+					text-shadow: 1px 1px 5px #000;
+					// width: 8em;
+					&:before{
+						content:'';
+						position: absolute;
+						left:5px;
+						top:.2em;
+						width:32px;
+						height: 32px;
+						background: url('../images/icon-anchor.png')no-repeat left top;
+						background-size: 32px auto;
+					}
+					&:hover, &:focus{
+						color:#aeff00;
+					}
+				}				
+			}
+		}
+
+
+		.m01{
+			position: absolute;
+			top:70px;
+			left:100px;
+		}
+		.m01-1{
+			position: absolute;
+			top:45px;
+			left:150px;
+		}
+		.m02{
+			position: absolute;
+			top:160px;
+			left:180px;
+		}
+		.m02-1{
+			position: absolute;
+			top:110px;
+			left:160px;
+		}
+		.m03{
+			position: absolute;
+			top:190px;
+			left:50px;
+		}
+		.m03-1{
+			position: absolute;
+			top:145px;
+			left:30px;
+		}
+		.m04{
+			position: absolute;
+			top:240px;
+			left:70px;
+		}
+		.m04-1{
+			position: absolute;
+			top:260px;
+			left:20px;
+		}
+		.m05{
+			position: absolute;
+			top:340px;
+			left:100px;
+		}
+		.m05-1{
+			position: absolute;
+			top:355px;
+			left:65px;
+		}
+		.m06{
+			position: absolute;
+			top:145px;
+			left:150px;
+		}
+		.m06-1{
+			position: absolute;
+			top:160px;
+			left:200px;
+		}
+		.m06-2{
+			position: absolute;
+			top:180px;
+			left:30px;
+		}
+		.m06-3{
+			position: absolute;
+			top:190px;
+			left:180px;
+
+		}
+		.m06-4{
+			position: absolute;
+			top:220px;
+			left:100px;
+		}
+		.m07{
+			position: absolute;
+			top:195px;
+			left:160px;
+		}
+		.m07-1{
+			position: absolute;
+			top:130px;
+			left:130px;
+		}
+		.m07-2{
+			position: absolute;
+			top:160px;
+			left:180px;
+		}
+		.m07-3{
+			position: absolute;
+			top:215px;
+			left:150px;
+		}
+		.m07-4{
+			position: absolute;
+			top:240px;
+			left:180px;
+		}
+		.m07-5{
+			position: absolute;
+			top:275px;
+			left:160px;
+		}
+		.m07-6{
+			position: absolute;
+			top:300px;
+			left:180px;
+		}
+		.m08{
+			position: absolute;
+			top:180px;
+			left:100px;
+		}
+		.m08-1{
+			position: absolute;
+			top:180px;
+			left:150px;
+		}
+		.m09{
+			position: absolute;
+			top:260px;
+			left:30px;
+		}
+		.m09-1{
+			position: absolute;
+			top:225px;
+			left:100px;
+		}
+		.m09-2{
+			position: absolute;
+			top:250px;
+			left:70px;
+		}
+		.m09-3{
+			position: absolute;
+			top:280px;
+			left:20px;
+		}
+		.m10{
+			position: absolute;
+			top:210px;
+			left:100px;
+		}
+		.m10-1{
+			position: absolute;
+			top:170px;
+			left:80px;
+		}
+		.m10-2{
+			position: absolute;
+			top:240px;
+			left:40px;
+		}
+		.m10-3{
+			position: absolute;
+			top:265px;
+			left:60px;
+		}
+		.m11{
+			position: absolute;
+			top:160px;
+			left:100px;
+		}
+		.m11-1{
+			position: absolute;
+			top:160px;
+			left:150px;
+		}
+		.m12{
+			position: absolute;
+			top:265px;
+			left:30px;
+		}
+		.m12-1{
+			position: absolute;
+			top:225px;
+			left:40px;
+		}
+		.m12-2{
+			position: absolute;
+			top:260px;
+			left:80px;
+		}
+		.m12-3{
+			position: absolute;
+			top:290px;
+			left:50px;
+		}
+	}
+
+}
+
+.spimg{
+	position: absolute;
+	top:8em;
+	right: 0;
+	z-index: -1;
+	width: 70%;
+	img{
+		width: 100%;
+		height: auto;
+		margin:0;
+        // margin:-12em 0 0 0;
+    }
+    @include screen('notebook') {
+    	width: 90%;
+    }
+    @include screen('tablet') {
+    	width: 100%;
+    	top:10em;  
+    }
+    @include screen('mobile') {
+    	top:22.5em;
+    }
+}
+
+
+.selyear{
+	margin: .5em 0;
+	ul{
+		@include li-reset;
+		text-align: center;
+		li{
+			display: inline-block;
+			font-weight: bold;
+			vertical-align: middle;
+
+			a{
+				display: block;
+				background: #5ab641;
+				color:#fff;
+				padding: .3em 1em;
+				font-size: 1em;
+				border-radius: 5px;
+				&:hover, &:focus{
+					background: darken(#5ab641, 6);
+				}
+			}
+
+		}
+		.year{
+			font-size: 1.5em;
+			margin-right: 1em;
+			border-right: solid 5px $lightColor;
+			padding-right: .5em;
+		}
+
+	}
+
+}
+
+.f-right{
+	float: right;
+	margin-top: -3.5em;
+	@include screen('xs_mobile') {
+		float: none;
+		margin-top: 1em;	
+	}
+}
+

@@ -1,0 +1,64 @@
+// 自動產生編號：https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+.np {
+    clear:both;
+    margin-bottom: 2em;
+    ul,ol {
+        overflow:hidden;
+        padding:1em 0;
+        margin: 0;
+        overflow:hidden;
+        @include li-reset;
+    }
+    li {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+        // &:nth-child(even) {
+        // 	width: 50%;
+        //     margin-right: 0px;
+        // }
+        @include screen('mobile') {
+            float:none;
+            width: 100%;
+            margin:0px auto 10px;
+            // &:nth-child(even){
+            //     width: 96%;
+            //     margin-right: auto;
+            // }
+        }
+        a {
+            border-radius:4px;
+            // border: 2px solid #DDD;
+            background: #969a62 url('../images/np_libg.png')no-repeat 1em center;
+            background-size: 60px auto;
+            color:#fff;
+            font-weight: bold;
+            font-size: 1.125em;
+            padding: 1em 1em 1em 5em;
+            display: block;
+            vertical-align: top;
+            margin: .3em;
+            @include text-overflow;
+            position:relative;
+            .num{
+                position: absolute;
+                width:1em;
+                top: 1em;
+                left: .5em;
+                text-align: right;
+                &:after{
+                    content:".";
+                    display:inline-block;
+                }
+            }
+            &:hover,
+            &:focus {
+                // border: 2px solid $primaryColor;
+                background: darken($aHover, 5) url('../images/np_libg.png')no-repeat 1em 3px;
+                background-size: 70px auto;
+                padding: 1em 1em 1em 5.5em;
+            }
+        }
+    }
+}
