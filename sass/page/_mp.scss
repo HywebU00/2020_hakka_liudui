@@ -545,20 +545,20 @@ a{
         padding: 0;
         border-top: 1px solid #1f1f1f;
         &>li {
-            padding: 1em .5em;
+            padding: 1em .5em 1em .3em;
             border-bottom: 1px solid #DDD;
             position: relative;
             .tag {
                 margin-left: 2em;
             }
             &>a {
-                display: block;
-                @include text-overflow;
-                position: relative;
-                line-height: 1.8em;
+                // display: inline-block;
+                // @include text-overflow;
+                // position: relative;
+                line-height: 1.6em;
                 vertical-align: middle;
                 color: $color-word;
-                margin-left: 13em;
+                // margin-left: 13em;
 
                 &:hover {
                     color: $aHover;
@@ -578,22 +578,23 @@ a{
                     white-space:normal;
                     line-height: 1.6em;
                     margin: .5em 0;
+                    display: block;
                 }
             }
             span.dept1 {
                 font-size: 1em;
-                padding: 1.2em .3em;
+                padding: 1.2em .3em 1.2em 0;
                 font-weight: bold;
                 letter-spacing:1px;
-                position: absolute;
-                left:0;
-                top:0;
+                // position: absolute;
+                // left:0;
+                // top:0;
                 &:before{
                     content:'';
                     position: absolute;
                     left:0;
                     bottom:0;
-                    width: 4.6em;
+                    width: 4.8em;
                     height: 5px;
                     background: #180e3d;
                 }
@@ -608,18 +609,18 @@ a{
             }
             span.dept2 {
                 font-size: 1em;
-                padding: 1.2em .3em;
+                padding: 1.2em .3em 1.2em 0;
                 font-weight: bold;
                 letter-spacing:1px;
-                position: absolute;
-                left:0;
-                top:0;
+                // position: absolute;
+                // left:0;
+                // top:0;
                 &:before{
                     content:'';
                     position: absolute;
                     left:0;
                     bottom:0;
-                    width: 4.6em;
+                    width: 4.8em;
                     height: 5px;
                     background: #5150da;
                 }
@@ -633,18 +634,18 @@ a{
          }
          span.dept3 {
             font-size: 1em;
-            padding: 1.2em .3em;
+            padding: 1.2em .3em 1.2em 0;
             font-weight: bold;
             letter-spacing:1px;
-            position: absolute;
-            left:0;
-            top:0;
+            // position: absolute;
+            // left:0;
+            // top:0;
             &:before{
                 content:'';
                 position: absolute;
                 left:0;
                 bottom:0;
-                width: 4.6em;
+                width: 4.8em;
                 height: 5px;
                 background: #fc398d;
             }
@@ -659,11 +660,11 @@ a{
         time {
             color: $color-word;
             font-size: .938em;
-            margin: 1.2em .5em;
+            margin: 1.2em .5em 1.2em 0;
             font-family: 'Merriweather', serif;
-            position: absolute;
-            left:6em;
-            top:0;
+            // position: absolute;
+            // left:6em;
+            // top:0;
         }
     }
 }
