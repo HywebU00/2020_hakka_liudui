@@ -346,6 +346,12 @@
 				color:#f6fc4e;
 				font-weight: bold;
 				text-shadow: 1px 1px 5px #000;
+				a{
+					color:#f6fc4e;
+					&:hover, &:focus{
+						color:#aeff00;
+					}
+				}
 			}
 			dd{
 				margin: 0;
@@ -375,6 +381,66 @@
 			}
 		}
 
+		.m00-1{
+			position: absolute;
+			top:18px;
+			left:130px;
+		}
+		.m00-2{
+			position: absolute;
+			top:70px;
+			left:180px;
+		}
+		.m00-3{
+			position: absolute;
+			top:90px;
+			left:100px;
+		}
+		.m00-4{
+			position: absolute;
+			top:145px;
+			left:80px;
+		}
+		.m00-5{
+			position: absolute;
+			top:195px;
+			left:130px;
+		}
+		.m00-6{
+			position: absolute;
+			top:260px;
+			left:60px;
+		}
+		.m00-7{
+			position: absolute;
+			top:290px;
+			left:30px;
+		}
+		.m00-8{
+			position: absolute;
+			top:285px;
+			left:120px;
+		}
+		.m00-9{
+			position: absolute;
+			top:320px;
+			left:30px;
+		}
+		.m00-10{
+			position: absolute;
+			top:330px;
+			left:120px;
+		}
+		.m00-11{
+			position: absolute;
+			top:385px;
+			left:100px;
+		}
+		.m00-12{
+			position: absolute;
+			top:417px;
+			left:45px;
+		}
 
 		.m01{
 			position: absolute;
